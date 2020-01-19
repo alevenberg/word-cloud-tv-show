@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np 
 from PIL import Image
 import string 
-from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+from wordcloud import WordCloud, ImageColorGenerator
 import sys 
 from os import path
 
