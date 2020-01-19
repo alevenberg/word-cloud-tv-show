@@ -19,10 +19,10 @@
 
 When you run, `./run.sh phineas-and-ferb`, the following is generated 
 
-A masked word cloud image:
-
-![mask image](https://github.com/alevenberg/word-cloud-tv-show/blob/master/phineas-and-ferb/mask_word_cloud.png)
-
 Word cloud:
 
-![word cloud image](https://github.com/alevenberg/word-cloud-tv-show/blob/master/phineas-and-ferb/word_cloud.png)
+![word cloud image](https://github.com/alevenberg/word-cloud-tv-show/blob/master/phineas-and-ferb/phineas-and-ferb-word-cloud.png)
+
+A masked word cloud image:
+
+![mask image](https://github.com/alevenberg/word-cloud-tv-show/blob/master/phineas-and-ferb/phineas-and-ferb-mask-word-cloud.png)
