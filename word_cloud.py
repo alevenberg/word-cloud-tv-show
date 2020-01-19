@@ -21,7 +21,7 @@ def generate_cloud(words, tv_show):
     # To view the figure
     # plt.show() 
 
-def generate_mask_word_cloud(words, mask):
+def generate_mask_word_cloud(words, mask, tv_show):
     char_mask = np.array(Image.open(mask, 'r').convert('RGB')) 
    
     wc = WordCloud(background_color="white", width=400, height=400, mask=char_mask)
@@ -42,9 +42,10 @@ def main():
 
     generate_cloud(words,tv_show)
 
-    mask_file = tv_show + "-mask.jpg"
-    if (path.exists("./" + tv_show + "/" + mask_file)):
-        generate_mask_word_cloud(words, mask_file)
+    mask_file = tv_show + "-mask.png"
+    mask_path = "./" + tv_show + "/" + mask_file
+    if (path.exists(mask_path)):
+        generate_mask_word_cloud(words, mask_path, tv_show)
 
 if __name__ == "__main__": 
     main()    
