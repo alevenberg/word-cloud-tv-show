@@ -22,7 +22,7 @@ def generate_cloud(words):
 def generate_mask_word_cloud(words, mask):
     char_mask = np.array(Image.open(mask, 'r').convert('RGB')) 
    
-    wc = WordCloud(background_color="white", max_words=200, width=400, height=400, mask=char_mask)
+    wc = WordCloud(background_color="white", width=400, height=400, mask=char_mask)
     wc.generate(words)
     wc.to_file('mask_word_cloud.png')
 
