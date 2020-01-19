@@ -8,7 +8,7 @@
 ## Generated Images
 
 A masked word cloud image 
-![mask image](./mask-word-cloud.png)
+![mask image](mask-word-cloud.png)
 
 Word cloud
-![word cloud image](./word-cloud.png)
+![word cloud image](word-cloud.png)
