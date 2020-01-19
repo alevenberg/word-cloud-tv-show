@@ -15,7 +15,7 @@ def generate_cloud(words):
     plt.savefig('word_cloud.png')
 
     # To view the figure
-    # plt.show() 
+    plt.show() 
 
 def main():
     # Replace with correct file name 
