@@ -37,7 +37,7 @@ def main():
     
     words = file.readline()
 
-    # generate_cloud(words)
+    generate_cloud(words)
 
     mask_file = "phineas-mask.jpg"
     generate_mask_word_cloud(words, mask_file)
