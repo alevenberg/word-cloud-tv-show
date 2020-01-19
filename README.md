@@ -2,15 +2,23 @@
 
 ## Outline 
 - [Scrape data](./scraper.py)
-- [Clean the data](./data_clean.py)
+- [Clean the data](./clean_data.py)
 - [Generate the word cloud](./word_cloud.py)
 
-## Generated Images
+## How to use
 
-A masked word cloud image 
+1. Set up and activate your environment and install the requirements according to the environment.yml
+2. Run the script 
+    * Make sure to give execute permissions: `chmod 755` 
+  
+## Example
 
-![mask image](https://github.com/alevenberg/word-cloud-tv-show/blob/master/mask_word_cloud.png)
+When you run, `./run.sh phineas-and-ferb`, the following is generated 
 
-Word cloud
+A masked word cloud image:
 
-![word cloud image](https://github.com/alevenberg/word-cloud-tv-show/blob/master/word_cloud.png)
+![mask image](https://github.com/alevenberg/word-cloud-tv-show/blob/master/phineas-and-ferb/mask_word_cloud.png)
+
+Word cloud:
+
+![word cloud image](https://github.com/alevenberg/word-cloud-tv-show/blob/master/phineas-and-ferb/word_cloud.png)

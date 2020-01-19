@@ -4,43 +4,47 @@ import numpy as np
 from PIL import Image
 import string 
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+import sys 
+from os import path
 
-def generate_cloud(words):
+def generate_cloud(words, tv_show):
     wc = WordCloud(width=480, height=480, margin=0)
     wc.generate(words)
-    wc.to_file('word_cloud.png')
+    wc.to_file("./" + tv_show + "/" + tv_show + '-word-cloud.png')
 
     # Plot the WordCloud image                        
     plt.figure(figsize = (8, 8), facecolor = None) 
-    plt.imshow(wordcloud) 
+    plt.imshow(wc) 
     plt.axis("off") 
     plt.tight_layout(pad = 0) 
 
     # To view the figure
-    plt.show() 
+    # plt.show() 
 
 def generate_mask_word_cloud(words, mask):
     char_mask = np.array(Image.open(mask, 'r').convert('RGB')) 
    
     wc = WordCloud(background_color="white", width=400, height=400, mask=char_mask)
     wc.generate(words)
-    wc.to_file('mask_word_cloud.png')
-
-    # plt.imshow(wc.recolor(color_func=image_colors))
-    # plt.show() 
+    wc.to_file("./" + tv_show + "/" + tv_show + '-mask-word-cloud.png')
 
 def main():
-    # Replace with correct file name 
-    file_name = "phineas-and-ferb-scripts.txt"
+    if len(sys.argv) < 2:
+        print("Usage: word_cloud.py tv-show-name")
+        sys.exit()
 
-    file = open(file_name,"r")
+    tv_show = sys.argv[1]
+    file_name = tv_show + "-scripts.txt"
+
+    file = open("./" + tv_show + "/" + file_name,"r")
     
     words = file.readline()
 
-    generate_cloud(words)
+    generate_cloud(words,tv_show)
 
-    mask_file = "phineas-mask.jpg"
-    generate_mask_word_cloud(words, mask_file)
+    mask_file = tv_show + "-mask.jpg"
+    if (path.exists("./" + tv_show + "/" + mask_file)):
+        generate_mask_word_cloud(words, mask_file)
 
 if __name__ == "__main__": 
     main()    
