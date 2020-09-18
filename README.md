@@ -1,6 +1,6 @@
 # word-cloud-tv-show
 
-## Outline 
+## File Outline 
 - [Scrape data](./scraper.py)
 - [Clean the data](./clean_data.py)
 - [Generate the word cloud](./word_cloud.py)
@@ -26,3 +26,13 @@ Word cloud:
 A masked word cloud image:
 
 ![mask image](https://github.com/alevenberg/word-cloud-tv-show/blob/master/phineas-and-ferb/phineas-and-ferb-mask-word-cloud.png)
+
+
+## Python libraries used
+
+- BeautifulSoup
+- requests
+- pandas
+- matplotlib
+- wordcloud
+
